@@ -9,6 +9,16 @@ import time
 import numpy as np
 import cv2
 
+def main():
+    PORT = 8080
+    server = HTTPServer(('', PORT), Handler)
+    print('Server Running on port %s' % PORT)
+    server.serve_forever()
+
+
+if __name__ == '__main__':
+    main()
+
 
 # broker= "192.168.1.104"
 # port = 2222
@@ -189,15 +199,7 @@ while True:
         break
     
     
-def main():
-    PORT = 8080
-    server = HTTPServer(('', PORT), Handler)
-    print('Server Running on port %s' % PORT)
-    server.serve_forever()
 
-
-if __name__ == '__main__':
-    main()
 
 # When everything is done, release the capture
 cap.release()
