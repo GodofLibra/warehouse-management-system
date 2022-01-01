@@ -2,7 +2,7 @@ const http = require('http');
 const xlsx = require('xlsx')
 const path = require("path");
 
-const filePath = path.resolve(__dirname, "test.xlsx");
+const filePath = path.resolve(__dirname, "Sample Data.xlsx");
 
 const workbook = xlsx.readFile(filePath)
 const sheetNames = workbook.SheetNames;
