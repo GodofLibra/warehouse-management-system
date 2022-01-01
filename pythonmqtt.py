@@ -2,7 +2,7 @@ import numpy as np
 from pyzbar.pyzbar import decode
 import pandas as pd
 import cv2
-# from http import server
+from http import server
 from http.server import HTTPServer, BaseHTTPRequestHandler
 import paho.mqtt.client as paho
 import time
@@ -10,12 +10,12 @@ import numpy as np
 import cv2
 
 
-broker= "192.168.1.104"
-port = 2222
+# broker= "192.168.1.104"
+# port = 2222
 
-publisher = paho.Client("Python publisher")
-publisher.connect(broker, port)
-Value = 0
+# publisher = paho.Client("Python publisher")
+# publisher.connect(broker, port)
+# Value = 0
 
 
 
@@ -64,7 +64,7 @@ while True:
             if ("1.0" in station):
                 if ("Ahmedabad" in str(city)):
                     print("Ahmedabad")
-                    publisher.publish("RB1/ROBO1", "RB1XABAD")
+                    # publisher.publish("RB1/ROBO1", "RB1XABAD")
                     class Handler(BaseHTTPRequestHandler):
                         def do_GET(self):
                             self.send_response(200)
@@ -74,7 +74,7 @@ while True:
 
                 if ("Pune" in str(city)):
                     print("Pune")
-                    publisher.publish("RB1/ROBO1", "RB1XPUNE")
+                    # publisher.publish("RB1/ROBO1", "RB1XPUNE")
                     class Handler(BaseHTTPRequestHandler):
                         def do_GET(self):
                             self.send_response(200)
@@ -85,41 +85,34 @@ while True:
 
                 if ("Mumbai" in str(city)):
                     print("Mumbai")
-                    publisher.publish("RB1/ROBO1", "RB1XMUMBAI")
-                    class Handler(BaseHTTPRequestHandler):
-                        def do_GET(self):
-                            self.send_response(200)
-                            self.send_header('content-type', 'text/html')
-                            self.end_headers()
-                            self.wfile.write('The Package has been delieverd to '.encode())
-                    # self.wfile.write('The Package has been delieverd to '.encode())
+                    # publisher.publish("RB1/ROBO1", "RB1XMUMBAI")
 
                 if ("Delhi" in str(city)):
                     print("Delhi")
-                    publisher.publish("RB1/ROBO1", "RB1XDELHI")
+                    # publisher.publish("RB1/ROBO1", "RB1XDELHI")
                     # self.wfile.write('The Package has been delieverd to '.encode())
 
                 if ("Kolkata" in str(city)):
                     print("Kolkata")
-                    publisher.publish("RB1/ROBO1", "RB1XKOLKATA")
-                    self.wfile.write('The Package has been delieverd to '.encode())
+                    # publisher.publish("RB1/ROBO1", "RB1XKOLKATA")
+                    # self.wfile.write('The Package has been delieverd to '.encode())
 
                 if ("Chennai" in str(city)):
                     print("Chennai")
                     
                 if ("Bengaluru" in str(city)):
                     print("Bengaluru")
-                    publisher.publish("RB1/ROBO1", "RB1XBENG")
+                    # publisher.publish("RB1/ROBO1", "RB1XBENG")
                     # self.wfile.write('The Package has been delieverd to '.encode())
 
                 if ("Jaipur" in str(city)):
                     print("Jaipur")
-                    publisher.publish("RB1/ROBO1", "RB1XJAIPUR")
+                    # publisher.publish("RB1/ROBO1", "RB1XJAIPUR")
                     # self.wfile.write('The Package has been delieverd to '.encode())
 
                 if ("Hyderabad" in str(city)):
                     print("Hyderabad")
-                    publisher.publish("RB1/ROBO1", "RB1XHYDER")
+                    # publisher.publish("RB1/ROBO1", "RB1XHYDER")
                     # self.wfile.write('The Package has been delieverd to '.encode())
 
             else:
@@ -153,14 +146,14 @@ while True:
             if ("2.0" in station):
                 if ("Ahmedabad" in str(city)):
                     print("Ahmedabad")
-                    publisher.publish("RB2/ROBO2", "RB2XABAD")
+                    # publisher.publish("RB2/ROBO2", "RB2XABAD")
 
                 if ("Pune" in str(city)):
                     print("Pune")
                     # self.wfile.write('The Package has been delieverd to '.encode())
                 if ("Mumbai" in str(city)):
                     print("Mumbai")
-                    self.wfile.write('The Package has been delieverd to '.encode())
+                    # self.wfile.write('The Package has been delieverd to '.encode())
                 if ("Delhi" in str(city)):
                     print("Delhi")
                     # self.wfile.write('The Package has been delieverd to '.encode())
