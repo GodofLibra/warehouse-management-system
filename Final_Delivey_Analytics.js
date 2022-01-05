@@ -1,3 +1,13 @@
+/*In oder to run this file please follow these steps 
+1. Download NodeJs in your system.
+2. download the entire folder in your system.
+3. open terminal in this folder and run the following command
+"npm i"
+4. once you run this command a folder of node modules will be created, if you see this folder, you are good to go :)
+
+*/
+
+
 const http = require('http');
 const xlsx = require('xlsx')
 const path = require("path");
